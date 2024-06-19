@@ -1,10 +1,14 @@
-
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Home from "./pages/Home"
+
 
 function App() {
   return (
-    <div>
-      Hello Jii Chalne k liye ready ho, git bhi setup ho gaya...
+    <div className='w-screen min-h-screen bg-richblack-900 flex-col font-inter'>
+     <Routes>
+      <Route path= "/" element={<Home/>} />
+     </Routes>
     </div>
   );
 }

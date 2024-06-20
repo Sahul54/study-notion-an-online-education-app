@@ -93,7 +93,7 @@ const Home = () => {
               position={"lg:flex-row-reverse"}
               heading={
                 <div className="text-4xl font-semibold">
-                  Unlock your
+                  some change
                   <HighlightText text={"coding potential"} /> with our online
                   courses.
                 </div>

@@ -8,6 +8,7 @@ import CodeBlocks from '../components/core/HomePage/CodeBlocks';
 import Footer from '../components/core/HomePage/Footer'
 import TimelineSection from '../components/core/HomePage/TimelineSection';
 import LearningLanguageSection from '../components/core/HomePage/LearningLanguageSection';
+import InstructorSection from '../components/core/HomePage/InstructorSection';
 
 
 const Home = () => {
@@ -29,7 +30,7 @@ const Home = () => {
             </Link>
         
 
-        <div className='mt-7 font-bold text-white text-4xl text-center text-cyan-600'>
+        <div className='mt-7 font-bold text-white text-4xl text-center text-cyan-600 '>
             Empower Your Future with 
             <HighlightText text={"coding Skills"}/>
         </div>
@@ -127,7 +128,7 @@ const Home = () => {
         {/* section 2 */}
         <div className='bg-pure-greys-5 text-richblack-700 '>
 
-          <div className='homepage_bg h-[5000px] '>
+          <div className='homepage_bg h-[100%]  '>
             <div className='h-[150px]'> </div>
             <div className='w-9/12 max-w-maxContent flex items-center
              gap-5 mx-auto justify-center'>
@@ -172,14 +173,18 @@ const Home = () => {
 
               <LearningLanguageSection/>
           </div>
-          
-
-        
 
         </div>
 
-
         {/* section 3 */}
+
+        <div className='w-9/12 mx-auto max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white'>
+
+              <InstructorSection/>
+
+              <h2 className='text-4xl text-center mt-28 font-semibold'>Reviews from other Learans</h2>
+
+        </div>
 
         {/* footer */}
         <div>

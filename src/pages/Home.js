@@ -5,10 +5,12 @@ import HighlightText from '../components/core/HomePage/HighlightText';
 import CTAButton from '../components/core/HomePage/Button';
 import Banner from "../assets/Images/banner.mp4"
 import CodeBlocks from '../components/core/HomePage/CodeBlocks';
-import Footer from '../components/core/HomePage/Footer'
+import Footer from '../components/common/Footer'
 import TimelineSection from '../components/core/HomePage/TimelineSection';
 import LearningLanguageSection from '../components/core/HomePage/LearningLanguageSection';
 import InstructorSection from '../components/core/HomePage/InstructorSection';
+import ExploreMore from '../components/core/HomePage/ExploreMore';
+import ReviewSlider from '../components/common/ReviewSlider';
 
 
 const Home = () => {
@@ -122,16 +124,19 @@ const Home = () => {
             />
         </div>
 
+        {/*  ExploreMore */}
+        <ExploreMore/>
+
         </div>
 
 
         {/* section 2 */}
-        <div className='bg-pure-greys-5 text-richblack-700 '>
+        <div className='bg-pure-greys-5 text-richblack-700'>
 
           <div className='homepage_bg h-[100%]  '>
             <div className='h-[150px]'> </div>
             <div className='w-9/12 max-w-maxContent flex items-center
-             gap-5 mx-auto justify-center'>
+             gap-5 mx-auto justify-center mt-[100px]'>
               <CTAButton active={true} linkto={"/signup"}>
                 <div className='flex items-center gap-3'>
                   Explore Full catalog
@@ -183,7 +188,9 @@ const Home = () => {
               <InstructorSection/>
 
               <h2 className='text-4xl text-center mt-28 font-semibold'>Reviews from other Learans</h2>
-
+               <div>
+                <ReviewSlider/>
+               </div>
         </div>
 
         {/* footer */}

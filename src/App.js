@@ -1,5 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/common/Navbar';
 import Home from "./pages/Home"
 // import OpenRoute from "./components/core/Auth/OpenRoute";
 // import Login from "./pages/Login";
@@ -9,8 +10,8 @@ import Home from "./pages/Home"
 function App() {
   return (
     <div className='w-screen min-h-screen bg-richblack-900 flex-col font-inter'>
-     <Routes>
-
+    <Navbar />
+    <Routes>
       <Route path= "/" element={<Home/>} />
       {/* <Route 
         path="signup"

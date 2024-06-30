@@ -7,8 +7,20 @@ import { useSelector } from 'react-redux';
 import { FaShoppingCart } from "react-icons/fa";
 import ProfileDropDown from '../core/Auth/ProfileDropDown';
 import { apiConnector } from '../../services/apiconnector';
-import { categories } from '../../services/api';
+import { categories } from '../../services/apis';
+import { IoIosArrowDown } from "react-icons/io";
 
+
+// const subLinks = [
+//     {
+//         title: "Python",
+//         link: "/catalog/python"
+//     },
+//     {
+//         title: "Web dev",
+//         link: "/catalog/web-dev"
+//     }
+// ];
 
 const Navbar = () => {
     
@@ -55,10 +67,33 @@ const Navbar = () => {
                                 <li key={index}>
                                     {
                                         link.title === "Catalog" ? (
-                                            <div>
+                                            <div className='relative flex flex-row gap-1 items-center group'>
                                                 <p>
                                                     {link.title}
                                                 </p>
+                                                < IoIosArrowDown />
+
+                                                <div className='invisible absolute left-[50%]
+                                                translate-x-[-50%] translate-y-[80%]
+                                                top-[50%]
+                                                flex flex-col rounded-md bg-richblack-5 p-4 text-richblack-900
+                                                opacity-0 tranasition-all duration-200 group-hover:visible
+                                                group-hover:opacity-100 lg:w-[280px]'>
+                                                
+                                                <div className='absolute left-[50%] top-0
+                                                translate-x-[40%] translate-y-[-45%] 
+                                                h-4 w-4 rotate-45 rounded bg-richblack-5'></div>
+                                                 {
+                                                    subLinks.length ? (
+                                                        subLinks.map( (subLink, index) => (
+                                                            <Link to = {`$subLink.Link`} key = {index}>
+                                                                {/* console.log({subLink.title}); */}
+                                                                <p>{subLink.title}</p>
+                                                            </Link>
+                                                        ))
+                                                    ) : (<div></div>)
+                                                }
+                                                </div>
                                             </div>
                                         ) : (
                                             <Link to={link?.path}>
@@ -77,7 +112,7 @@ const Navbar = () => {
                 {/* Login/Signup/Dashbord  */}
                 <div>
                     {
-                        user && user?.accountType != "Instructor" && (
+                        user && user?.accountType !== "Instructor" && (
                             <Link to="/dashboard/cart" className='relative'>
                                 <FaShoppingCart /> 
                                 {

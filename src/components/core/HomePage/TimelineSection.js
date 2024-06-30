@@ -20,7 +20,7 @@ const timeline = [
     {
         Logo: Logo3,
         Heading: "Flexibility",
-        Description: "The ability to switch is an important skills"
+        Description: "The ability to switch is an important skill"
     },
     {
         Logo: Logo4,
@@ -38,7 +38,7 @@ const TimelineSection = () => {
                         return (
                             <div className='flex flex-row gap-5' key={index}>
                                 <div className='flex w-[50px] h-[50px] bg-white items-center'>
-                                    <img src={element.Logo}/>
+                                    <img src={element.Logo} alt={`${element.Heading} logo`}/>
                                 </div>
                                 
                                 <div>
@@ -53,19 +53,18 @@ const TimelineSection = () => {
 
             <div className='relative shadow-blue-200'>
                 <img src={timelineImage}
-                alt="timelineImage"
+                alt="Timeline"
                 className='shadow-white object-cover h-fit' />
 
                 <div className='absolute bg-caribbeangreen-700 flex flex-row text-white uppercase py-6
                         translate-x-[9%] translate-y-[-50%]'>
                     <div className='flex flex-row gap-5 items-center border-r border-caribbeangreen-300 px-7'>
                         <p className='text-3xl font-bold'>10</p>
-                        <p className='text-caribbeangreen-300 text-sm'>Year of Experience</p>
+                        <p className='text-caribbeangreen-300 text-sm'>Years of Experience</p>
                     </div>
                     <div className='flex gap-5 items-center px-7'>
-                    <p className='text-3xl font-bold'>250</p>
-                        <p className='text-caribbeangreen-300 text-sm '>Type of Courses</p>
-
+                        <p className='text-3xl font-bold'>250</p>
+                        <p className='text-caribbeangreen-300 text-sm '>Types of Courses</p>
                     </div>
                 </div>
             </div>

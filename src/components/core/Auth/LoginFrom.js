@@ -26,6 +26,7 @@ function LoginForm() {
     }));
   };
 
+
   const handleOnSubmit = (e) => {
     e.preventDefault();
     if (!email || !password) {
@@ -36,7 +37,7 @@ function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleOnSubmit} className="mt-6 flex w-full flex-col gap-y-4">
+    <form onSubmit={handleOnSubmit} className="mt-6 flex items-center flex-col gap-y-4 w-9/12">
       <label className="w-full" style={{ position: "relative" }}>
         <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
           Email Address <sup className="text-pink-200">*</sup>

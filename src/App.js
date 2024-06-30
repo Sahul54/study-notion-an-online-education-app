@@ -2,8 +2,8 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
 import Home from "./pages/Home"
-// import OpenRoute from "./components/core/Auth/OpenRoute";
-// import Login from "./pages/Login";
+import OpenRoute from "./components/core/Auth/OpenRoute";
+import Login from "./pages/Login";
 // import Signup from './pages/Signup';
 
 
@@ -20,7 +20,7 @@ function App() {
                     <Signup/>
                   </OpenRoute>
         }
-        />
+        /> */}
 
         <Route
           path="login"
@@ -29,7 +29,7 @@ function App() {
               <Login />
             </OpenRoute>
           }
-          /> */}
+          />
           
      </Routes>
     </div>

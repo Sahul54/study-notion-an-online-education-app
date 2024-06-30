@@ -62,6 +62,7 @@ export function signUp(accountType, firstName, lastName, email, password, confir
 }
 
 export function login(email, password, navigate) {
+    console.log("Api hitting............");
   return async (dispatch) => {
     const toastId = toast.loading("Loading...");
     dispatch(setLoading(true));

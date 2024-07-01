@@ -4,7 +4,7 @@ import Navbar from './components/common/Navbar';
 import Home from "./pages/Home"
 import OpenRoute from "./components/core/Auth/OpenRoute";
 import Login from "./pages/Login";
-// import Signup from './pages/Signup';
+import Signup from './pages/Signup';
 
 
 function App() {
@@ -13,14 +13,14 @@ function App() {
     <Navbar />
     <Routes>
       <Route path= "/" element={<Home/>} />
-      {/* <Route 
+      <Route 
         path="signup"
         element= {
                   <OpenRoute>
                     <Signup/>
                   </OpenRoute>
         }
-        /> */}
+        />
 
         <Route
           path="login"

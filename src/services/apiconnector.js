@@ -11,3 +11,4 @@ export const apiConnector = (method, url, bodyData, header, params) => {
         params: params ? params: null,
     });
 }
+

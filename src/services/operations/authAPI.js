@@ -14,9 +14,7 @@ const {
 } = endpoints
 
 export function sendOtp(email, navigate) {
-  
   return async (dispatch) => {
-    console.log(dispatch);
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
@@ -40,9 +38,7 @@ export function sendOtp(email, navigate) {
     }
     dispatch(setLoading(false))
     toast.dismiss(toastId)
-    
   }
-  
 }
 
 export function signUp(
@@ -86,9 +82,6 @@ export function signUp(
   }
 }
 
-
-//  Login-----------------
-
 export function login(email, password, navigate) {
   return async (dispatch) => {
     const toastId = toast.loading("Loading...")
@@ -124,8 +117,6 @@ export function login(email, password, navigate) {
   }
 }
 
-//  Logout------------------
-
 export function logout(navigate) {
   return (dispatch) => {
     dispatch(setToken(null))
@@ -139,13 +130,12 @@ export function logout(navigate) {
 }
 
 
-// get reste Password-------------
 
 export function getPasswordResetToken(email , setEmailSent) {
   return async(dispatch) => {
     dispatch(setLoading(true));
     try{
-      const response = await apiConnector("POST", RESETPASSTOKEN_API, {email})
+      const response = await apiConnector("POST", RESETPASSTOKEN_API, {email,})
 
       console.log("RESET PASSWORD TOKEN RESPONSE....", response);
 

@@ -110,11 +110,11 @@ const Navbar = () => {
                 </nav>
 
                 {/* Login/Signup/Dashbord  */}
-                <div>
+                <div className='flex fle-row text-white items-center'>
                     {
                         user && user?.accountType !== "Instructor" && (
                             <Link to="/dashboard/cart" className='relative'>
-                                <FaShoppingCart /> 
+                                <FaShoppingCart className='mr-5 text-lg ' /> 
                                 {
                                     totalItem > 0 && (
                                         <span>

@@ -1,6 +1,6 @@
 import { toast } from "react-hot-toast"
 
-import { updateCompletedLectures } from "../../slices/viewCourseSlice"
+// import { updateCompletedLectures } from "../../slices/viewCourseSlice"
 // import { setLoading } from "../../slices/profileSlice";
 import { apiConnector } from "../apiconnector"
 import { courseEndpoints } from "../apis"
@@ -142,6 +142,7 @@ export const createSection = async (data, token) => {
     }
     toast.success("Course Section Created")
     result = response?.data?.updatedCourse
+    console.log("hello.........",data, token);
   } catch (error) {
     console.log("CREATE SECTION API ERROR............", error)
     toast.error(error.message)

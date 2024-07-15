@@ -31,7 +31,7 @@ export default function CourseInformationForm() {
   const { course, editCourse } = useSelector((state) => state.course)
   const [loading, setLoading] = useState(false)
   const [courseCategories, setCourseCategories] = useState([])
-
+   console.log("www",course);
   useEffect(() => {
     const getCategories = async () => {
       setLoading(true)

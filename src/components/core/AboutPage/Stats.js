@@ -1,35 +1,35 @@
-import React from 'react'
+import React from "react";
+import CountUp from "react-countup";
 
+const Stats = [
+  { count: "500", label: "Active Students" },
+  { count: "10", label: "Mentors" },
+  { count: "100", label: "Courses" },
+  { count: "50", label: "Ratings" },
+];
 
-const StatsComponents = () => {
-
-    const stats = [
-        {count: '5K', lable: 'Active Students'},
-        {count: '10', lable: 'Mentors'},
-        {count: '200', lable: 'Courses'},
-        {count: '50', lable: 'Awards'}
-    ]
+const StatsComponent = () => {
   return (
-    <section className='bg-richblue-700'>
-        <div className='flex flex-row gap-5 justify-between w-9/12 max-w-maxContent text-white mx-auto px-36'>
-            {
-                stats.map((data, index) => {
-                    return (
-                        <div key = {index} className='flex flex-col py-8 items-center '> 
-                            <h1 className='text-2xl font-bold'>
-                                {data.count}
-                            </h1>
-                            <p className='text-richblack-300'>
-                                {data.lable}
-                            </p>
-                        </div>
-                    )
-                })
-            }
+    <div className="bg-richblack-700">
+      {/* Stats */}
+      <div className="flex flex-col gap-10 justify-between w-11/12 max-w-maxContent text-white mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 text-center">
+          {Stats.map((data, index) => {
+            return (
+              <div className="flex flex-col py-10" key={index}>
+                <h1 className="text-[30px] font-bold text-richblack-5">
+                  <CountUp duration={10} end={data.count} />+
+                </h1>
+                <h2 className="font-semibold text-[16px] text-richblack-500">
+                  {data.label}
+                </h2>
+              </div>
+            );
+          })}
         </div>
+      </div>
+    </div>
+  );
+};
 
-    </section>
-  )
-}
-
-export default StatsComponents
+export default StatsComponent;

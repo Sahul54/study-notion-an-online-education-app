@@ -21,7 +21,7 @@ export default function PublishCourse() {
     if (course?.status === COURSE_STATUS.PUBLISHED) {
       setValue("public", true)
     }
-  }, [course?.status, setValue])
+  }, [])
 
   const goBack = () => {
     dispatch(setStep(2))
@@ -33,10 +33,6 @@ export default function PublishCourse() {
   }
 
   const handleCoursePublish = async () => {
-    // Debugging statements
-    console.log('Course status:', course?.status)
-    console.log('Public checkbox value:', getValues("public"))
-    
     // check if form has been updated or not
     if (
       (course?.status === COURSE_STATUS.PUBLISHED &&
@@ -48,20 +44,12 @@ export default function PublishCourse() {
       goToCourses()
       return
     }
-    if (!course?._id) {
-      console.error('Course ID is undefined')
-      return
-    }
-
     const formData = new FormData()
     formData.append("courseId", course._id)
     const courseStatus = getValues("public")
       ? COURSE_STATUS.PUBLISHED
       : COURSE_STATUS.DRAFT
     formData.append("status", courseStatus)
-    
-    console.log('Form data:', formData)
-    
     setLoading(true)
     const result = await editCourseDetails(formData, token)
     if (result) {
@@ -106,7 +94,8 @@ export default function PublishCourse() {
           >
             Back
           </button>
-          <IconBtn disabled={loading} text="Save Changes" />
+          {/* <IconBtn disabled={loading} text="Save Changes" /> */}
+          <button className="bg-yellow-50 font-semibold px-3 py-2 rounded-md">Save Changes</button>
         </div>
       </form>
     </div>

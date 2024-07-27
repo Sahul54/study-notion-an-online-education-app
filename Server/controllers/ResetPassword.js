@@ -1,6 +1,6 @@
 const User = require("../models/User");
 const mailSender = require("../utils/mailSender");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const crypto = require("crypto");
 
 exports.resetPasswordToken = async (req, res) => {
@@ -24,8 +24,8 @@ exports.resetPasswordToken = async (req, res) => {
 			{ new: true }
 		);
 		console.log("DETAILS", updatedDetails);
-
-		const url = `http://localhost:3000/update-password/${token}`;
+		// const url = `http://localhost:3000/update-password/${token}`
+		const url = `https://study-notion-frontend-wheat.vercel.app/update-password/${token}`;
 
 		await mailSender(
 			email,

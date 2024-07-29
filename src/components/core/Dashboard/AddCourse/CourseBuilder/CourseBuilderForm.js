@@ -78,6 +78,7 @@ export default function CourseBuilderForm() {
   };
 
   const goToNext = () => {
+    console.log("click nhi ho raha hai");
     if (!course?.courseContent?.length) {
       toast.error("Please add at least one section");
       return;
@@ -148,9 +149,16 @@ export default function CourseBuilderForm() {
         >
           Back
         </button>
-        <IconBtn disabled={loading} text="Next" onClick={goToNext}>
+
+        <button
+          disabled={loading} text="Next" onClick={goToNext}
+          className="flex cursor-pointer items-center gap-x-2 rounded-md bg-yellow-50 py-[8px] px-[20px] font-semibold text-richblack-900"
+        >
+          Next
+        </button>
+        {/* <IconBtn disabled={loading} text="Next" onClick={goToNext}>
           <MdNavigateNext />
-        </IconBtn>
+        </IconBtn> */}
       </div>
     </div>
   );

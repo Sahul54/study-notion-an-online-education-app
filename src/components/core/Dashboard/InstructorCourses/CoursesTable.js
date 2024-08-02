@@ -39,6 +39,7 @@ export default function CoursesTable({ courses, setCourses }) {
 
   console.log("All Course ", courses)
 
+  // UI
   return (
     <>
       <Table className="rounded-xl border relative border-richblack-800">

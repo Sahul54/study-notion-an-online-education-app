@@ -201,8 +201,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ CodeHelp ©
-            {(new Date().getFullYear())} Studynotion</div>
+          <div className="text-center">Made with ❤️ Studynotion {(new Date().getFullYear())} </div>
 
         </div>
       </div>

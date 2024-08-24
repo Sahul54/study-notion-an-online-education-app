@@ -15,7 +15,7 @@ const contactDetails = [
     heading: "Visit us",
     description: "Come and say hello at our office HQ.",
     details:
-      "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016",
+      "Akshya Nagar 1st Block 1st Cross, Neelbad, Bhopal-462044",
   },
   {
     icon: "IoCall",
